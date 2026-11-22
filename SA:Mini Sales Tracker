@@ -1,0 +1,40 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main () {
+    int customer;
+    double sales;
+    double averageSales;
+    int counter = 0;
+    double total = 0;
+    
+    cout << "Customer (0 to stop): ";
+    cin >> customer;
+    
+    while (customer !=0) {
+        cout << "Sales: ";
+        cin >> sales;
+        
+        counter++;
+        total += sales;
+        
+        cout << "Customer (0 tot stop): ";
+        cin >> customer;
+    }
+    
+    if (counter >0) {
+    }
+    
+    averageSales = total / counter;
+    
+    cout << fixed << setprecision(2);
+    
+    cout << "===== Mini Sales Tracker =====" << endl;
+    cout << "Number of customers: " << counter << endl;
+    cout << "Total sales: PHP " << total << endl;
+    cout << "Average sales per customer: PHP " << averageSales << endl;
+    cout << "==============================";
+    
+    return 0;
+}
